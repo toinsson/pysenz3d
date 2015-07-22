@@ -2,11 +2,9 @@
 
 #include "stdio.h"
 #include "pxcupipeline.h"
-// #include <iostream>
-// #include <fstream>
-// using namespace std;
 
-namespace camera {
+
+namespace senz3d {
 
     Rectangle::Rectangle(int X0, int Y0, int X1, int Y1) {
         x0 = X0;

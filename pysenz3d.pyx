@@ -1,7 +1,7 @@
 # distutils: language = c++
 # distutils: sources = senz3d.cpp
 
-cdef extern from "senz3d.h" namespace "camera":
+cdef extern from "senz3d.h" namespace "senz3d":
     cdef cppclass Rectangle:
         Rectangle(int, int, int, int) except +
         int x0, y0, x1, y1

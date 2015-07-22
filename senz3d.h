@@ -1,4 +1,4 @@
-namespace camera {
+namespace senz3d {
     class Rectangle {
     public:
         int x0, y0, x1, y1;

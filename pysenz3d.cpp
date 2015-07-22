@@ -231,8 +231,8 @@ void __Pyx_call_destructor(T* x) {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__pysenz3d
-#define __PYX_HAVE_API__pysenz3d
+#define __PYX_HAVE__pysenz3d__pysenz3d
+#define __PYX_HAVE_API__pysenz3d__pysenz3d
 #include "senz3d.h"
 #include "ios"
 #include "new"
@@ -420,22 +420,22 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "pysenz3d.pyx",
+  "pysenz3d\\pysenz3d.pyx",
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_8pysenz3d_PyRectangle;
+struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle;
 
-/* "pysenz3d.pyx":14
+/* "pysenz3d\pysenz3d.pyx":14
  *         int getPicture()
  * 
  * cdef class PyRectangle:             # <<<<<<<<<<<<<<
  *     """Rectangle class for rectangular shenanigans"""
  *     cdef Rectangle *thisptr      # hold a C++ instance which we're wrapping
  */
-struct __pyx_obj_8pysenz3d_PyRectangle {
+struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle {
   PyObject_HEAD
-  camera::Rectangle *thisptr;
+  senz3d::Rectangle *thisptr;
 };
 
 #ifndef CYTHON_REFNANNY
@@ -578,20 +578,20 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'pysenz3d' */
-static PyTypeObject *__pyx_ptype_8pysenz3d_PyRectangle = 0;
-#define __Pyx_MODULE_NAME "pysenz3d"
-int __pyx_module_is_main_pysenz3d = 0;
+/* Module declarations from 'pysenz3d.pysenz3d' */
+static PyTypeObject *__pyx_ptype_8pysenz3d_8pysenz3d_PyRectangle = 0;
+#define __Pyx_MODULE_NAME "pysenz3d.pysenz3d"
+int __pyx_module_is_main_pysenz3d__pysenz3d = 0;
 
-/* Implementation of 'pysenz3d' */
-static int __pyx_pf_8pysenz3d_11PyRectangle___cinit__(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self, int __pyx_v_x0, int __pyx_v_y0, int __pyx_v_x1, int __pyx_v_y1); /* proto */
-static void __pyx_pf_8pysenz3d_11PyRectangle_2__dealloc__(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self, PyObject *__pyx_v_dx, PyObject *__pyx_v_dy); /* proto */
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
-static PyObject *__pyx_tp_new_8pysenz3d_PyRectangle(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+/* Implementation of 'pysenz3d.pysenz3d' */
+static int __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle___cinit__(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self, int __pyx_v_x0, int __pyx_v_y0, int __pyx_v_x1, int __pyx_v_y1); /* proto */
+static void __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_2__dealloc__(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self, PyObject *__pyx_v_dx, PyObject *__pyx_v_dy); /* proto */
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self); /* proto */
+static PyObject *__pyx_tp_new_8pysenz3d_8pysenz3d_PyRectangle(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static char __pyx_k_dx[] = "dx";
 static char __pyx_k_dy[] = "dy";
 static char __pyx_k_x0[] = "x0";
@@ -609,7 +609,7 @@ static PyObject *__pyx_n_s_x1;
 static PyObject *__pyx_n_s_y0;
 static PyObject *__pyx_n_s_y1;
 
-/* "pysenz3d.pyx":17
+/* "pysenz3d\pysenz3d.pyx":17
  *     """Rectangle class for rectangular shenanigans"""
  *     cdef Rectangle *thisptr      # hold a C++ instance which we're wrapping
  *     def __cinit__(self, int x0, int y0, int x1, int y1):             # <<<<<<<<<<<<<<
@@ -618,8 +618,8 @@ static PyObject *__pyx_n_s_y1;
  */
 
 /* Python wrapper */
-static int __pyx_pw_8pysenz3d_11PyRectangle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_8pysenz3d_11PyRectangle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_v_x0;
   int __pyx_v_y0;
   int __pyx_v_x1;
@@ -685,27 +685,27 @@ static int __pyx_pw_8pysenz3d_11PyRectangle_1__cinit__(PyObject *__pyx_v_self, P
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_8pysenz3d_11PyRectangle___cinit__(((struct __pyx_obj_8pysenz3d_PyRectangle *)__pyx_v_self), __pyx_v_x0, __pyx_v_y0, __pyx_v_x1, __pyx_v_y1);
+  __pyx_r = __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle___cinit__(((struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *)__pyx_v_self), __pyx_v_x0, __pyx_v_y0, __pyx_v_x1, __pyx_v_y1);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_8pysenz3d_11PyRectangle___cinit__(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self, int __pyx_v_x0, int __pyx_v_y0, int __pyx_v_x1, int __pyx_v_y1) {
+static int __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle___cinit__(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self, int __pyx_v_x0, int __pyx_v_y0, int __pyx_v_x1, int __pyx_v_y1) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  camera::Rectangle *__pyx_t_1;
+  senz3d::Rectangle *__pyx_t_1;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "pysenz3d.pyx":18
+  /* "pysenz3d\pysenz3d.pyx":18
  *     cdef Rectangle *thisptr      # hold a C++ instance which we're wrapping
  *     def __cinit__(self, int x0, int y0, int x1, int y1):
  *         self.thisptr = new Rectangle(x0, y0, x1, y1)             # <<<<<<<<<<<<<<
@@ -713,14 +713,14 @@ static int __pyx_pf_8pysenz3d_11PyRectangle___cinit__(struct __pyx_obj_8pysenz3d
  *         del self.thisptr
  */
   try {
-    __pyx_t_1 = new camera::Rectangle(__pyx_v_x0, __pyx_v_y0, __pyx_v_x1, __pyx_v_y1);
+    __pyx_t_1 = new senz3d::Rectangle(__pyx_v_x0, __pyx_v_y0, __pyx_v_x1, __pyx_v_y1);
   } catch(...) {
     __Pyx_CppExn2PyErr();
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_v_self->thisptr = __pyx_t_1;
 
-  /* "pysenz3d.pyx":17
+  /* "pysenz3d\pysenz3d.pyx":17
  *     """Rectangle class for rectangular shenanigans"""
  *     cdef Rectangle *thisptr      # hold a C++ instance which we're wrapping
  *     def __cinit__(self, int x0, int y0, int x1, int y1):             # <<<<<<<<<<<<<<
@@ -732,14 +732,14 @@ static int __pyx_pf_8pysenz3d_11PyRectangle___cinit__(struct __pyx_obj_8pysenz3d
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "pysenz3d.pyx":19
+/* "pysenz3d\pysenz3d.pyx":19
  *     def __cinit__(self, int x0, int y0, int x1, int y1):
  *         self.thisptr = new Rectangle(x0, y0, x1, y1)
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -748,21 +748,21 @@ static int __pyx_pf_8pysenz3d_11PyRectangle___cinit__(struct __pyx_obj_8pysenz3d
  */
 
 /* Python wrapper */
-static void __pyx_pw_8pysenz3d_11PyRectangle_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_8pysenz3d_11PyRectangle_3__dealloc__(PyObject *__pyx_v_self) {
+static void __pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_3__dealloc__(PyObject *__pyx_v_self) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
-  __pyx_pf_8pysenz3d_11PyRectangle_2__dealloc__(((struct __pyx_obj_8pysenz3d_PyRectangle *)__pyx_v_self));
+  __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_2__dealloc__(((struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
 }
 
-static void __pyx_pf_8pysenz3d_11PyRectangle_2__dealloc__(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self) {
+static void __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_2__dealloc__(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "pysenz3d.pyx":20
+  /* "pysenz3d\pysenz3d.pyx":20
  *         self.thisptr = new Rectangle(x0, y0, x1, y1)
  *     def __dealloc__(self):
  *         del self.thisptr             # <<<<<<<<<<<<<<
@@ -771,7 +771,7 @@ static void __pyx_pf_8pysenz3d_11PyRectangle_2__dealloc__(struct __pyx_obj_8pyse
  */
   delete __pyx_v_self->thisptr;
 
-  /* "pysenz3d.pyx":19
+  /* "pysenz3d\pysenz3d.pyx":19
  *     def __cinit__(self, int x0, int y0, int x1, int y1):
  *         self.thisptr = new Rectangle(x0, y0, x1, y1)
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -783,7 +783,7 @@ static void __pyx_pf_8pysenz3d_11PyRectangle_2__dealloc__(struct __pyx_obj_8pyse
   __Pyx_RefNannyFinishContext();
 }
 
-/* "pysenz3d.pyx":21
+/* "pysenz3d\pysenz3d.pyx":21
  *     def __dealloc__(self):
  *         del self.thisptr
  *     def getLength(self):             # <<<<<<<<<<<<<<
@@ -792,20 +792,20 @@ static void __pyx_pf_8pysenz3d_11PyRectangle_2__dealloc__(struct __pyx_obj_8pyse
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_5getLength(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_8pysenz3d_11PyRectangle_4getLength[] = "getLength methid return the x1 - x0";
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_5getLength(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_5getLength(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_8pysenz3d_8pysenz3d_11PyRectangle_4getLength[] = "getLength methid return the x1 - x0";
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_5getLength(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getLength (wrapper)", 0);
-  __pyx_r = __pyx_pf_8pysenz3d_11PyRectangle_4getLength(((struct __pyx_obj_8pysenz3d_PyRectangle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_4getLength(((struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self) {
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -814,7 +814,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getLength", 0);
 
-  /* "pysenz3d.pyx":23
+  /* "pysenz3d\pysenz3d.pyx":23
  *     def getLength(self):
  *         """getLength methid return the x1 - x0"""
  *         return self.thisptr.getLength()             # <<<<<<<<<<<<<<
@@ -828,7 +828,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8p
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pysenz3d.pyx":21
+  /* "pysenz3d\pysenz3d.pyx":21
  *     def __dealloc__(self):
  *         del self.thisptr
  *     def getLength(self):             # <<<<<<<<<<<<<<
@@ -839,7 +839,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8p
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.getLength", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.getLength", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -847,7 +847,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8p
   return __pyx_r;
 }
 
-/* "pysenz3d.pyx":24
+/* "pysenz3d\pysenz3d.pyx":24
  *         """getLength methid return the x1 - x0"""
  *         return self.thisptr.getLength()
  *     def getHeight(self):             # <<<<<<<<<<<<<<
@@ -856,19 +856,19 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_4getLength(struct __pyx_obj_8p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_7getHeight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_7getHeight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_7getHeight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_7getHeight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getHeight (wrapper)", 0);
-  __pyx_r = __pyx_pf_8pysenz3d_11PyRectangle_6getHeight(((struct __pyx_obj_8pysenz3d_PyRectangle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_6getHeight(((struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self) {
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -877,7 +877,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getHeight", 0);
 
-  /* "pysenz3d.pyx":25
+  /* "pysenz3d\pysenz3d.pyx":25
  *         return self.thisptr.getLength()
  *     def getHeight(self):
  *         return self.thisptr.getHeight()             # <<<<<<<<<<<<<<
@@ -891,7 +891,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8p
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pysenz3d.pyx":24
+  /* "pysenz3d\pysenz3d.pyx":24
  *         """getLength methid return the x1 - x0"""
  *         return self.thisptr.getLength()
  *     def getHeight(self):             # <<<<<<<<<<<<<<
@@ -902,7 +902,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8p
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.getHeight", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.getHeight", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -910,7 +910,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8p
   return __pyx_r;
 }
 
-/* "pysenz3d.pyx":26
+/* "pysenz3d\pysenz3d.pyx":26
  *     def getHeight(self):
  *         return self.thisptr.getHeight()
  *     def getArea(self):             # <<<<<<<<<<<<<<
@@ -919,19 +919,19 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_6getHeight(struct __pyx_obj_8p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_9getArea(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_9getArea(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_9getArea(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_9getArea(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getArea (wrapper)", 0);
-  __pyx_r = __pyx_pf_8pysenz3d_11PyRectangle_8getArea(((struct __pyx_obj_8pysenz3d_PyRectangle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_8getArea(((struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self) {
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -940,7 +940,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pys
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getArea", 0);
 
-  /* "pysenz3d.pyx":27
+  /* "pysenz3d\pysenz3d.pyx":27
  *         return self.thisptr.getHeight()
  *     def getArea(self):
  *         return self.thisptr.getArea()             # <<<<<<<<<<<<<<
@@ -954,7 +954,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pys
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pysenz3d.pyx":26
+  /* "pysenz3d\pysenz3d.pyx":26
  *     def getHeight(self):
  *         return self.thisptr.getHeight()
  *     def getArea(self):             # <<<<<<<<<<<<<<
@@ -965,7 +965,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pys
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.getArea", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.getArea", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -973,7 +973,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pys
   return __pyx_r;
 }
 
-/* "pysenz3d.pyx":28
+/* "pysenz3d\pysenz3d.pyx":28
  *     def getArea(self):
  *         return self.thisptr.getArea()
  *     def move(self, dx, dy):             # <<<<<<<<<<<<<<
@@ -982,8 +982,8 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_8getArea(struct __pyx_obj_8pys
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_11move(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_11move(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_11move(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_11move(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_dx = 0;
   PyObject *__pyx_v_dy = 0;
   int __pyx_lineno = 0;
@@ -1031,18 +1031,18 @@ static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_11move(PyObject *__pyx_v_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("move", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.move", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.move", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_8pysenz3d_11PyRectangle_10move(((struct __pyx_obj_8pysenz3d_PyRectangle *)__pyx_v_self), __pyx_v_dx, __pyx_v_dy);
+  __pyx_r = __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_10move(((struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *)__pyx_v_self), __pyx_v_dx, __pyx_v_dy);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self, PyObject *__pyx_v_dx, PyObject *__pyx_v_dy) {
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self, PyObject *__pyx_v_dx, PyObject *__pyx_v_dy) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -1052,7 +1052,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysen
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("move", 0);
 
-  /* "pysenz3d.pyx":29
+  /* "pysenz3d\pysenz3d.pyx":29
  *         return self.thisptr.getArea()
  *     def move(self, dx, dy):
  *         self.thisptr.move(dx, dy)             # <<<<<<<<<<<<<<
@@ -1063,7 +1063,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysen
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_v_dy); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->thisptr->move(__pyx_t_1, __pyx_t_2);
 
-  /* "pysenz3d.pyx":28
+  /* "pysenz3d\pysenz3d.pyx":28
  *     def getArea(self):
  *         return self.thisptr.getArea()
  *     def move(self, dx, dy):             # <<<<<<<<<<<<<<
@@ -1075,7 +1075,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysen
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.move", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.move", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1083,7 +1083,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysen
   return __pyx_r;
 }
 
-/* "pysenz3d.pyx":30
+/* "pysenz3d\pysenz3d.pyx":30
  *     def move(self, dx, dy):
  *         self.thisptr.move(dx, dy)
  *     def getPicture(self):             # <<<<<<<<<<<<<<
@@ -1091,19 +1091,19 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_10move(struct __pyx_obj_8pysen
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_13getPicture(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_8pysenz3d_11PyRectangle_13getPicture(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_13getPicture(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_13getPicture(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getPicture (wrapper)", 0);
-  __pyx_r = __pyx_pf_8pysenz3d_11PyRectangle_12getPicture(((struct __pyx_obj_8pysenz3d_PyRectangle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_12getPicture(((struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_8pysenz3d_PyRectangle *__pyx_v_self) {
+static PyObject *__pyx_pf_8pysenz3d_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1112,7 +1112,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getPicture", 0);
 
-  /* "pysenz3d.pyx":31
+  /* "pysenz3d\pysenz3d.pyx":31
  *         self.thisptr.move(dx, dy)
  *     def getPicture(self):
  *         return self.thisptr.getPicture()             # <<<<<<<<<<<<<<
@@ -1124,7 +1124,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pysenz3d.pyx":30
+  /* "pysenz3d\pysenz3d.pyx":30
  *     def move(self, dx, dy):
  *         self.thisptr.move(dx, dy)
  *     def getPicture(self):             # <<<<<<<<<<<<<<
@@ -1134,7 +1134,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysenz3d.PyRectangle.getPicture", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysenz3d.pysenz3d.PyRectangle.getPicture", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1142,7 +1142,7 @@ static PyObject *__pyx_pf_8pysenz3d_11PyRectangle_12getPicture(struct __pyx_obj_
   return __pyx_r;
 }
 
-static PyObject *__pyx_tp_new_8pysenz3d_PyRectangle(PyTypeObject *t, PyObject *a, PyObject *k) {
+static PyObject *__pyx_tp_new_8pysenz3d_8pysenz3d_PyRectangle(PyTypeObject *t, PyObject *a, PyObject *k) {
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -1150,13 +1150,13 @@ static PyObject *__pyx_tp_new_8pysenz3d_PyRectangle(PyTypeObject *t, PyObject *a
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  if (unlikely(__pyx_pw_8pysenz3d_11PyRectangle_1__cinit__(o, a, k) < 0)) {
+  if (unlikely(__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_1__cinit__(o, a, k) < 0)) {
     Py_DECREF(o); o = 0;
   }
   return o;
 }
 
-static void __pyx_tp_dealloc_8pysenz3d_PyRectangle(PyObject *o) {
+static void __pyx_tp_dealloc_8pysenz3d_8pysenz3d_PyRectangle(PyObject *o) {
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && (!PyType_IS_GC(Py_TYPE(o)) || !_PyGC_FINALIZED(o))) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -1166,28 +1166,28 @@ static void __pyx_tp_dealloc_8pysenz3d_PyRectangle(PyObject *o) {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
     ++Py_REFCNT(o);
-    __pyx_pw_8pysenz3d_11PyRectangle_3__dealloc__(o);
+    __pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_3__dealloc__(o);
     --Py_REFCNT(o);
     PyErr_Restore(etype, eval, etb);
   }
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static PyMethodDef __pyx_methods_8pysenz3d_PyRectangle[] = {
-  {"getLength", (PyCFunction)__pyx_pw_8pysenz3d_11PyRectangle_5getLength, METH_NOARGS, __pyx_doc_8pysenz3d_11PyRectangle_4getLength},
-  {"getHeight", (PyCFunction)__pyx_pw_8pysenz3d_11PyRectangle_7getHeight, METH_NOARGS, 0},
-  {"getArea", (PyCFunction)__pyx_pw_8pysenz3d_11PyRectangle_9getArea, METH_NOARGS, 0},
-  {"move", (PyCFunction)__pyx_pw_8pysenz3d_11PyRectangle_11move, METH_VARARGS|METH_KEYWORDS, 0},
-  {"getPicture", (PyCFunction)__pyx_pw_8pysenz3d_11PyRectangle_13getPicture, METH_NOARGS, 0},
+static PyMethodDef __pyx_methods_8pysenz3d_8pysenz3d_PyRectangle[] = {
+  {"getLength", (PyCFunction)__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_5getLength, METH_NOARGS, __pyx_doc_8pysenz3d_8pysenz3d_11PyRectangle_4getLength},
+  {"getHeight", (PyCFunction)__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_7getHeight, METH_NOARGS, 0},
+  {"getArea", (PyCFunction)__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_9getArea, METH_NOARGS, 0},
+  {"move", (PyCFunction)__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_11move, METH_VARARGS|METH_KEYWORDS, 0},
+  {"getPicture", (PyCFunction)__pyx_pw_8pysenz3d_8pysenz3d_11PyRectangle_13getPicture, METH_NOARGS, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_8pysenz3d_PyRectangle = {
+static PyTypeObject __pyx_type_8pysenz3d_8pysenz3d_PyRectangle = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pysenz3d.PyRectangle", /*tp_name*/
-  sizeof(struct __pyx_obj_8pysenz3d_PyRectangle), /*tp_basicsize*/
+  "pysenz3d.pysenz3d.PyRectangle", /*tp_name*/
+  sizeof(struct __pyx_obj_8pysenz3d_8pysenz3d_PyRectangle), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_8pysenz3d_PyRectangle, /*tp_dealloc*/
+  __pyx_tp_dealloc_8pysenz3d_8pysenz3d_PyRectangle, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -1214,7 +1214,7 @@ static PyTypeObject __pyx_type_8pysenz3d_PyRectangle = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_8pysenz3d_PyRectangle, /*tp_methods*/
+  __pyx_methods_8pysenz3d_8pysenz3d_PyRectangle, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -1224,7 +1224,7 @@ static PyTypeObject __pyx_type_8pysenz3d_PyRectangle = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_8pysenz3d_PyRectangle, /*tp_new*/
+  __pyx_tp_new_8pysenz3d_8pysenz3d_PyRectangle, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -1351,14 +1351,14 @@ PyMODINIT_FUNC PyInit_pysenz3d(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_pysenz3d) {
+  if (__pyx_module_is_main_pysenz3d__pysenz3d) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "pysenz3d")) {
-      if (unlikely(PyDict_SetItemString(modules, "pysenz3d", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pysenz3d.pysenz3d")) {
+      if (unlikely(PyDict_SetItemString(modules, "pysenz3d.pysenz3d", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -1370,16 +1370,16 @@ PyMODINIT_FUNC PyInit_pysenz3d(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_8pysenz3d_PyRectangle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_8pysenz3d_PyRectangle.tp_print = 0;
-  if (PyObject_SetAttrString(__pyx_m, "PyRectangle", (PyObject *)&__pyx_type_8pysenz3d_PyRectangle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_8pysenz3d_PyRectangle = &__pyx_type_8pysenz3d_PyRectangle;
+  if (PyType_Ready(&__pyx_type_8pysenz3d_8pysenz3d_PyRectangle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_8pysenz3d_8pysenz3d_PyRectangle.tp_print = 0;
+  if (PyObject_SetAttrString(__pyx_m, "PyRectangle", (PyObject *)&__pyx_type_8pysenz3d_8pysenz3d_PyRectangle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_8pysenz3d_8pysenz3d_PyRectangle = &__pyx_type_8pysenz3d_8pysenz3d_PyRectangle;
   /*--- Type import code ---*/
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "pysenz3d.pyx":1
+  /* "pysenz3d\pysenz3d.pyx":1
  * # distutils: language = c++             # <<<<<<<<<<<<<<
  * # distutils: sources = senz3d.cpp
  * 
@@ -1396,11 +1396,11 @@ PyMODINIT_FUNC PyInit_pysenz3d(void)
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init pysenz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pysenz3d.pysenz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init pysenz3d");
+    PyErr_SetString(PyExc_ImportError, "init pysenz3d.pysenz3d");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
