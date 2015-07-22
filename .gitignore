@@ -1,7 +1,8 @@
 # build/temp directory
 build/temp*
 
-
+# compiled python files
+*.pyc
 
 
 
