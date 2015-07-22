@@ -1,3 +1,12 @@
+# build/temp directory
+build/temp*
+
+
+
+
+
+## TO BE CLEANED
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
