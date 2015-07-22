@@ -1,13 +1,30 @@
+#include "stdio.h"
+#include "pxcupipeline.h"
+
 namespace senz3d {
-    class Rectangle {
-    public:
-        int x0, y0, x1, y1;
-        Rectangle(int x0, int y0, int x1, int y1);
-        ~Rectangle();
-        int getLength();
-        int getHeight();
-        int getArea();
-        void move(int dx, int dy);
-        int getPicture(void);
+
+    class Senz3d {
+
+        PXCUPipeline_Instance instance;
+
+        public:
+            
+            Senz3d();
+            ~Senz3d();
+
+            // size of the image
+            int width, height;
+
+            // get Image Size
+            void getPictureSize(int* width, int* height);
+
+            // get One Picture
+            unsigned int* getPicture(void);
+
+            // capture image stream
+
+            // release image stream
+
+
     };
 }
