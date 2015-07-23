@@ -16,18 +16,28 @@ Using the distutils methods, you can execute:
 python setup.py build
 ```
 
-to create the pysenz3d python module.
+to create the pysenz3d python module. It can be installed with:
+
+```
+python setup.py install
+```
+This will also copy the libpxcupipeline DLL under the site-package directory.
 
 ## Usage:
 To start the you will choose the mode with which the module is supposed to operate. This is static per instance.
-Mode available are RGB, Depth, UV, ...
+Modes available are RGB, Depth, UV, ...
 ```
 from pysenz3d import PySenz3d
 ```
 Once the instance is created, you can query the image size and a picture at a time with `getPicture()`.
 ```
 cam = PySenz3d()
-pic = cam.getPicture()
+picSize = cam.get_picture_size()
+picData = cam.get_picture()
+picShaped = pic.reshape(s[::-1])
+import matplotlib.pyplot as plt
+plt.imshow(picShaped)
+plt.show()
 ```
 The other way is to set up a process that will create an image stream into a deque that is accessible from the main process.
 

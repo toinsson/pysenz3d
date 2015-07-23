@@ -42,7 +42,12 @@ cdef extern from "senz3d.h" namespace "senz3d":
         void* getPicture()
 
 cdef class PySenz3d:
-    """Senz3d class for rectangular shenanigans"""
+    """
+    Senz3d class to capture pictures from camera.
+    The init function defaults to VGA mode but WXGA and QVGA are also
+    available. The mode of choice can be passed in the init call via
+    the enum Senz3dMode.
+    """
     cdef Senz3d* senz3d      # hold a C++ instance which we're wrapping
     cdef PXCUPipeline mode
     cdef int data_type
