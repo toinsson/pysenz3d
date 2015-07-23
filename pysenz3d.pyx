@@ -13,37 +13,63 @@ from libc.stdlib cimport free
 from cpython cimport PyObject, Py_INCREF
 
 
+cdef extern from "pxcupipeline.h":
+    enum PXCUPipeline:
+        PXCU_PIPELINE_COLOR_VGA         #=0x00000001
+        PXCU_PIPELINE_COLOR_WXGA        #=0x00000010
+        PXCU_PIPELINE_DEPTH_QVGA        #=0x00000020
+        PXCU_PIPELINE_DEPTH_QVGA_60FPS  #=0x00000080
+
+def enum(*sequential, **named):
+    enums = dict(zip(sequential, range(len(sequential))), **named)
+    reverse = dict((value, key) for key, value in enums.iteritems())
+    enums['reverse_mapping'] = reverse
+    return type('Enum', (), enums)
+
+Senz3dMode = enum(
+    COLOR_VGA        = PXCU_PIPELINE_COLOR_VGA,
+    COLOR_WXGA       = PXCU_PIPELINE_COLOR_WXGA,
+    DEPTH_QVGA       = PXCU_PIPELINE_DEPTH_QVGA,
+    DEPTH_QVGA_60FPS = PXCU_PIPELINE_DEPTH_QVGA_60FPS,
+    )
+
 cdef extern from "senz3d.h" namespace "senz3d":
     cdef cppclass Senz3d:
         Senz3d() except +
+        Senz3d(PXCUPipeline) except +
 
         int width, height
-        void getPictureSize(int* width, int* height)
-        unsigned int* getPicture()
+        void getPictureSize(int*, int*)
+        void* getPicture()
 
 cdef class PySenz3d:
     """Senz3d class for rectangular shenanigans"""
     cdef Senz3d* senz3d      # hold a C++ instance which we're wrapping
 
-    def __cinit__(self):
-        self.senz3d = new Senz3d()
+    # def __cinit__(self):
+    #     self.senz3d = new Senz3d()
+    def __cinit__(self, PXCUPipeline mode = PXCU_PIPELINE_COLOR_VGA):
+        # mode = 'COLOR_VGA
+        self.senz3d = new Senz3d(mode)
 
     def __dealloc__(self):
         del self.senz3d
 
-    def getPictureSize(self):
+    # todo: change to get_picture_size
+    def get_picture_size(self):
         cdef int width, height
 
         self.senz3d.getPictureSize(&width, &height)
         return (width, height)
 
-    def getPicture(self):
+    # todo: change to get_picture
+    def get_picture(self):
 
         cdef unsigned int* array
         cdef np.ndarray ndarray
 
         cdef int size = self.senz3d.width*self.senz3d.height
-        array = self.senz3d.getPicture()
+        array = <unsigned int*>self.senz3d.getPicture()
 
         array_wrapper = ArrayWrapper()
         array_wrapper.set_data(size, <void*> array) 
@@ -54,7 +80,7 @@ cdef class PySenz3d:
         # Increment the reference count, as the above assignement was done in
         # C, and Python does not know that there is this additional reference
         Py_INCREF(array_wrapper)
-        
+
         return ndarray
 
 cdef class ArrayWrapper:
@@ -89,4 +115,3 @@ cdef class ArrayWrapper:
         """ Frees the array. This is called by Python when all the
         references to the object are gone. """
         free(<void*>self.data_ptr)
-

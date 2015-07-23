@@ -7,9 +7,13 @@ namespace senz3d {
 
         PXCUPipeline_Instance instance;
 
+        // camera mode, can be VGA, XVGA, QVGA
+        PXCUPipeline mode;
+
         public:
             
             Senz3d();
+            Senz3d(PXCUPipeline mode);
             ~Senz3d();
 
             // size of the image
@@ -19,7 +23,7 @@ namespace senz3d {
             void getPictureSize(int* width, int* height);
 
             // get One Picture
-            unsigned int* getPicture(void);
+            void* getPicture(void);
 
             // capture image stream
 
