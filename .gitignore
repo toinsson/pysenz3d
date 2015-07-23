@@ -4,6 +4,8 @@ build/temp*
 # compiled python files
 *.pyc
 
+# Cython generated cpp 
+pysenz3d.cpp
 
 
 ## TO BE CLEANED

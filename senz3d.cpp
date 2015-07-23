@@ -17,6 +17,7 @@ namespace senz3d {
         instance = PXCUPipeline_Create();
         PXCUPipeline_Init(instance, CamMode);
         mode = CamMode;
+
         // set the size for future use
         getPictureSize(&width, &height);
     }
@@ -46,12 +47,25 @@ namespace senz3d {
 
         PXCUPipeline_AcquireFrame(instance, true);
 
-        int width, height = 0;
-        PXCUPipeline_QueryRGBSize(instance, &width, &height);
+        void* data = NULL;
 
-        unsigned int* data = new unsigned int[height*width];
+        switch (mode) {
+            case PXCU_PIPELINE_COLOR_VGA:
+            case PXCU_PIPELINE_COLOR_WXGA:
+                data = new unsigned int[height*width];
+                PXCUPipeline_QueryRGB(instance, (unsigned char*)data);
+                break;
 
-        PXCUPipeline_QueryRGB(instance, (unsigned char *)data);
+            case PXCU_PIPELINE_DEPTH_QVGA:
+            case PXCU_PIPELINE_DEPTH_QVGA_60FPS:
+                data = new short[height*width];
+                PXCUPipeline_QueryDepthMap(instance, (short*)data);
+                break;
+
+            default:
+                break;
+        }
+
         PXCUPipeline_ReleaseFrame(instance);
 
         return (void*)data;
