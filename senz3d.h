@@ -16,6 +16,9 @@ namespace senz3d {
             Senz3d(PXCUPipeline mode);
             ~Senz3d();
 
+            //
+            // bool init(void);
+
             // size of the image
             int width, height;
 

@@ -7,6 +7,7 @@ namespace senz3d {
     Senz3d::Senz3d() {
 
         instance = PXCUPipeline_Create();
+        mode = PXCU_PIPELINE_COLOR_VGA;
         PXCUPipeline_Init(instance, PXCU_PIPELINE_COLOR_VGA);
 
         // set the size for future use
@@ -25,6 +26,10 @@ namespace senz3d {
     Senz3d::~Senz3d() { 
         PXCUPipeline_Close(instance);
     }
+
+    // bool Senz3d::init() {
+    //     return PXCUPipeline_Init(instance, mode);
+    // }
 
     // get Picture Size
     void Senz3d::getPictureSize(int* width, int* height) {

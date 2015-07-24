@@ -11,6 +11,7 @@ np.import_array()
 
 from libc.stdlib cimport free
 from cpython cimport PyObject, Py_INCREF
+from libcpp cimport bool
 
 cdef extern from "pxcupipeline.h":
     enum PXCUPipeline:
@@ -36,8 +37,8 @@ cdef extern from "senz3d.h" namespace "senz3d":
     cdef cppclass Senz3d:
         Senz3d() except +
         Senz3d(PXCUPipeline) except +
-
         int width, height
+        bool init()
         void getPictureSize(int*, int*)
         void* getPicture()
 
@@ -53,7 +54,7 @@ cdef class PySenz3d:
     cdef int data_type
 
     def __cinit__(self, PXCUPipeline mode = PXCU_PIPELINE_COLOR_VGA):
-        self.senz3d = new Senz3d(mode)
+        # self.senz3d = new Senz3d(mode)
         self.mode = mode
         if mode == PXCU_PIPELINE_COLOR_VGA:
             self.data_type = np.NPY_INT
@@ -66,6 +67,12 @@ cdef class PySenz3d:
 
     def __dealloc__(self):
         del self.senz3d
+
+    def init(self):
+        """Connect to the camera
+        """
+        self.senz3d = new Senz3d(self.mode)
+        # return self.senz3d.init()
 
     def get_picture_size(self):
         cdef int width, height
@@ -92,6 +99,13 @@ cdef class PySenz3d:
         Py_INCREF(array_wrapper)
 
         return ndarray
+
+    def __reduce__(self):
+        return (rebuild, (self.mode,))
+
+def rebuild(mode):
+    p = PySenz3d(mode)
+    return p
 
 cdef class ArrayWrapper:
     cdef void* data_ptr
