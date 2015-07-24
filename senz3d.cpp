@@ -5,33 +5,29 @@
 namespace senz3d {
 
     Senz3d::Senz3d() {
-
         instance = PXCUPipeline_Create();
         mode = PXCU_PIPELINE_COLOR_VGA;
-        PXCUPipeline_Init(instance, PXCU_PIPELINE_COLOR_VGA);
-
-        // set the size for future use
-        getPictureSize(&width, &height);
     }
     Senz3d::Senz3d(PXCUPipeline CamMode) {
-
         instance = PXCUPipeline_Create();
-        PXCUPipeline_Init(instance, CamMode);
         mode = CamMode;
-
-        // set the size for future use
-        getPictureSize(&width, &height);
     }
 
     Senz3d::~Senz3d() { 
         PXCUPipeline_Close(instance);
     }
 
-    // bool Senz3d::init() {
-    //     return PXCUPipeline_Init(instance, mode);
-    // }
+    bool Senz3d::init() {
+        bool init;
+        init = PXCUPipeline_Init(instance, mode);
+        getPictureSize(&width, &height);
+        return init;
+    }
 
-    // get Picture Size
+    void Senz3d::close() {
+        PXCUPipeline_Close(instance);
+    }
+
     void Senz3d::getPictureSize(int* width, int* height) {
         PXCUPipeline_AcquireFrame(instance, true);
         
@@ -47,7 +43,6 @@ namespace senz3d {
         PXCUPipeline_ReleaseFrame(instance);
     }
 
-    // get One Picture
     void* Senz3d::getPicture() {
 
         PXCUPipeline_AcquireFrame(instance, true);
@@ -67,6 +62,8 @@ namespace senz3d {
                 PXCUPipeline_QueryDepthMap(instance, (short*)data);
                 break;
 
+            // add case for IR and UV images
+
             default:
                 break;
         }
@@ -75,10 +72,4 @@ namespace senz3d {
 
         return (void*)data;
     }
-
-    // capture image stream
-    // TBD
-
-    // release image stream
-    // TBD
 }

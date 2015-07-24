@@ -39,6 +39,7 @@ cdef extern from "senz3d.h" namespace "senz3d":
         Senz3d(PXCUPipeline) except +
         int width, height
         bool init()
+        void close()
         void getPictureSize(int*, int*)
         void* getPicture()
 
@@ -66,13 +67,18 @@ cdef class PySenz3d:
             self.data_type = np.NPY_SHORT
 
     def __dealloc__(self):
+        # call to close?
+        # self.senz3d.close()
         del self.senz3d
 
     def init(self):
         """Connect to the camera
         """
         self.senz3d = new Senz3d(self.mode)
-        # return self.senz3d.init()
+        return self.senz3d.init()
+
+    def close(self):
+        self.senz3d.close()
 
     def get_picture_size(self):
         cdef int width, height
