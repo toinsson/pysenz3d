@@ -55,7 +55,6 @@ cdef class PySenz3d:
     cdef int data_type
 
     def __cinit__(self, PXCUPipeline mode = PXCU_PIPELINE_COLOR_VGA):
-        # self.senz3d = new Senz3d(mode)
         self.mode = mode
         if mode == PXCU_PIPELINE_COLOR_VGA:
             self.data_type = np.NPY_INT
