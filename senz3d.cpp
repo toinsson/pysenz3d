@@ -26,6 +26,7 @@ namespace senz3d {
 
     void Senz3d::close() {
         PXCUPipeline_Close(instance);
+        PXCUPipeline_Destroy(instance);
     }
 
     void Senz3d::getPictureSize(int* width, int* height) {

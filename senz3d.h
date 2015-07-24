@@ -29,11 +29,5 @@ namespace senz3d {
 
             // get One Picture
             void* getPicture(void);
-
-            // capture image stream
-
-            // release image stream
-
-
     };
 }

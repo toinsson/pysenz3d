@@ -29,6 +29,6 @@ extensions = [
 ]
 
 setup(
-    # name = "pysenz3d",
+    name = "pysenz3d",
     ext_modules = cythonize(extensions),
 )
