@@ -2,8 +2,7 @@
 
 This is a Python binding for the Creative Senz3d camera. It wraps the C library libpxcupipeline from the [Intel Percpetual Computing SDK] (https://software.intel.com/sites/landingpage/perceptual_computing/documentation/html/). 
 
-The library **libpxcupipeline** provides a highly simplified level interface to the SDK with access to color picture capturing, 
-as well as face location, finger tracking and voice recognition. 
+The library **libpxcupipeline** provides a highly simplified level interface to the SDK with access to color picture capturing, as well as face location, finger tracking and voice recognition. 
 The focus if this wrapper is to provide an interface to picture capturing only, but it can easily be extended.
 
 The Python interface is built using Cython, and is using the DLLs from libxcupipeline and libpxcutils. 
