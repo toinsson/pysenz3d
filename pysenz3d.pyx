@@ -33,6 +33,50 @@ Senz3dMode = enum(
     DEPTH_QVGA_60FPS = PXCU_PIPELINE_DEPTH_QVGA_60FPS,
     )
 
+# include property enum in later release
+# enum Property {
+#     /* Single value properties */
+#     PROPERTY_COLOR_EXPOSURE             =   1,
+#     PROPERTY_COLOR_BRIGHTNESS           =   2,
+#     PROPERTY_COLOR_CONTRAST             =   3,
+#     PROPERTY_COLOR_SATURATION           =   4,
+#     PROPERTY_COLOR_HUE                  =   5,
+#     PROPERTY_COLOR_GAMMA                =   6,
+#     PROPERTY_COLOR_WHITE_BALANCE        =   7,
+#     PROPERTY_COLOR_SHARPNESS            =   8,
+#     PROPERTY_COLOR_BACK_LIGHT_COMPENSATION  =   9,
+#     PROPERTY_COLOR_GAIN                     =   10,
+#     PROPERTY_AUDIO_MIX_LEVEL            =   100,
+
+#     PROPERTY_DEPTH_SATURATION_VALUE     =   200,
+#     PROPERTY_DEPTH_LOW_CONFIDENCE_VALUE =   201,
+#     PROPERTY_DEPTH_CONFIDENCE_THRESHOLD =   202,
+#     PROPERTY_DEPTH_SMOOTHING            =   203,
+#     PROPERTY_DEPTH_UNIT                 =   204,   // in micron
+
+#     PROPERTY_CAMERA_MODEL               =   300,
+
+#     /* Two value properties */
+#     PROPERTY_COLOR_FIELD_OF_VIEW        =   1000,
+#     PROPERTY_COLOR_SENSOR_RANGE         =   1002,
+#     PROPERTY_COLOR_FOCAL_LENGTH         =   1006,
+#     PROPERTY_COLOR_PRINCIPAL_POINT      =   1008,
+
+#     PROPERTY_DEPTH_FIELD_OF_VIEW        =   2000,
+#     PROPERTY_DEPTH_SENSOR_RANGE         =   2002,
+#     PROPERTY_DEPTH_FOCAL_LENGTH         =   2006,
+#     PROPERTY_DEPTH_PRINCIPAL_POINT      =   2008,
+    
+
+#     /* Misc. */
+#     PROPERTY_ACCELEROMETER_READING      =   3000,   // three values
+#     PROPERTY_PROJECTION_SERIALIZABLE    =   3003,
+
+#     /* Customized properties */
+#     PROPERTY_CUSTOMIZED=0x04000000,
+# };
+
+
 cdef extern from "senz3d.h" namespace "senz3d":
     cdef cppclass Senz3d:
         Senz3d() except +
@@ -66,8 +110,6 @@ cdef class PySenz3d:
             self.data_type = np.NPY_SHORT
 
     def __dealloc__(self):
-        # call to close?
-        # self.senz3d.close()
         del self.senz3d
 
     def init(self):

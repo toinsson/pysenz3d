@@ -14,14 +14,14 @@ pxcupipeline = r"C:\Users\antoi_000\Documents\dev\senz3d\pxcupipeline"
 
 extensions = [
     Extension("pysenz3d", 
-    	sources = ["pysenz3d.pyx", "senz3d.cpp"],
+        sources = ["pysenz3d.pyx", "senz3d.cpp"],
         include_dirs = [
-        				visualStudio+r"\VC\include",
-    					intelPCSDK+r"\sample\common\include",
-        				intelPCSDK+r"\include",
-        				pxcupipeline+r"\include",
+                        visualStudio+r"\VC\include",
+                        intelPCSDK+r"\sample\common\include",
+                        intelPCSDK+r"\include",
+                        pxcupipeline+r"\include",
                         numpy.get_include(),
-        				],
+                        ],
         libraries = ['libpxcupipeline_d'],
         library_dirs = ['.\include'],
         language="c++",
