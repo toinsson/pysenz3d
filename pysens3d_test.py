@@ -1,5 +1,6 @@
 import sys
-sys.path.insert(1,r"C:\Users\antoi_000\Documents\dev\pysenz3d\build\lib.win32-2.7")
+from os import getcwd
+sys.path.insert(1,getcwd()+r"\build\lib.win32-2.7")
 from pysenz3d import PySenz3d, Senz3dMode
 
 cam = PySenz3d()

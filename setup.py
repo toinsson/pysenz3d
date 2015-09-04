@@ -3,7 +3,6 @@ from distutils.extension import Extension
 from Cython.Build import cythonize
 import numpy
 
-
 # local path to include resources
 intelPCSDK = r"C:\Program Files (x86)\Intel\PCSDK"
 pxcupipeline = r"\framework\common\pxcupipeline"
