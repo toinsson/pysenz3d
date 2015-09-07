@@ -34,10 +34,9 @@ def example2():
     im = ax.imshow(p2)
 
     def handle_close(event):
-
         pass
     fig.canvas.mpl_connect('close_event', handle_close)
-        
+
     def update_img(n):
         a = cam.get_picture()
         p1 = a.view(dtype=np.uint8)
@@ -84,6 +83,6 @@ if __name__ == '__main__':
         pass
     cam.close()
 
-    # example3()
+    example3()
 
     print 'exit'
