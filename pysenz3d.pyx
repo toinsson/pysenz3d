@@ -97,8 +97,10 @@ cdef class PySenz3d:
     cdef Senz3d* senz3d      # hold a C++ instance which we're wrapping
     cdef PXCUPipeline mode
     cdef int data_type
+    cdef readonly bool is_inited
 
     def __cinit__(self, PXCUPipeline mode = PXCU_PIPELINE_COLOR_VGA):
+        self.is_inited = False
         self.mode = mode
         if mode == PXCU_PIPELINE_COLOR_VGA:
             self.data_type = np.NPY_INT
@@ -116,9 +118,11 @@ cdef class PySenz3d:
         """Connect to the camera
         """
         self.senz3d = new Senz3d(self.mode)
+        self.is_inited = True
         return self.senz3d.init()
 
     def close(self):
+        self.is_inited = False
         self.senz3d.close()
 
     def get_picture_size(self):
